@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_background"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar_layout"
+        android:theme="@style/MainTheme"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@drawable/main_toolbar"
+            android:minHeight="40dp"
+            android:theme="?attr/actionBarTheme"/>
+
+        <LinearLayout
+            android:id="@+id/tabs_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/toolbar"
+            android:scrollbars="horizontal"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/EventsTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:fontFamily="@font/nunito_bold"
+                android:padding="10dp"
+                android:text="Events"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ProfileTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_bold"
+                android:padding="10dp"
+                android:text="Profile"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/SettingsTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:fontFamily="@font/nunito_bold"
+                android:padding="10dp"
+                android:text="Settings"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:layout_below="@id/toolbar_layout" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_pager"
+        android:layout_margin="5dp"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="28dp"
+        android:src="@drawable/add"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/notification"
+        android:layout_margin="28dp"
+        android:layout_gravity="bottom|start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

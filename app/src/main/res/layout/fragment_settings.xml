@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <Button
+        android:id="@+id/settings_my_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingStart="10dp"
+        android:text="My Events"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/settings_open_sources_library"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Open Source Library"
+        android:paddingStart="10dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+
+    <Button
+        android:id="@+id/settings_private_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Private Policy"
+        android:paddingStart="10dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+
+    <Button
+        android:id="@+id/settings_terms_and_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingStart="10dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:text="Terms and Conditions"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/settings_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Version 1.0"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/settings_credits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Credits"
+        android:paddingStart="10dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/settings_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Log Out"
+        android:textAlignment="textStart"
+        android:background="@drawable/button_gradient"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+</LinearLayout>

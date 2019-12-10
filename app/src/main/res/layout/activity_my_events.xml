@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/my_event_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/new_event_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/my_event_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/my_event_back"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="My Events"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/my_event_app_bar"
+        android:id="@+id/my_events_list"
+        android:visibility="invisible"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/no_events"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:text="No Events Yet."
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

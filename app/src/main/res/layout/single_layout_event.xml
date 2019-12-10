@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/events_profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_placeholder" />
+
+            <TextView
+                android:id="@+id/events_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/events_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_placeholder" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/events_likes_count"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/events_likes"
+                android:layout_width="30dp"
+                android:layout_toRightOf="@+id/events_likes_count"
+                android:layout_marginRight="5dp"
+                android:layout_height="30dp"
+                android:src="@drawable/like_empty" />
+
+            <TextView
+                android:id="@+id/events_donated_count"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+
+                android:layout_toRightOf="@+id/events_likes"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/events_donate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/events_donated_count"
+                android:src="@drawable/donation_empty" />
+
+            <TextView
+                android:id="@+id/events_joined_count"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/events_donate"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/events_join"
+                android:layout_width="30dp"
+                android:layout_toRightOf="@+id/events_joined_count"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/join_hands_empty" />
+
+            <TextView
+                android:id="@+id/events_volunteer_count"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/events_join"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/events_volunteer"
+                android:layout_width="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/events_volunteer_count"
+                android:layout_height="30dp"
+                android:src="@drawable/volunteer_empty" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

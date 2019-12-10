@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "681530019723",
+    "firebase_url": "https://sociality-1586c.firebaseio.com",
+    "project_id": "sociality-1586c",
+    "storage_bucket": "sociality-1586c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681530019723:android:1adf30143481b6598ee98e",
+        "android_client_info": {
+          "package_name": "com.sociality"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681530019723-i50p7poo953gpa8kjrm0g5evhtr75l4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sociality",
+            "certificate_hash": "7fba22248f2ebd7d929fde93b9b567af355325d7"
+          }
+        },
+        {
+          "client_id": "681530019723-3a6b2jaji7rtpqut40ir1j9dctk3tj05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCtThOj-ziKwFoFikAUySNeXTv63x66TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681530019723-3a6b2jaji7rtpqut40ir1j9dctk3tj05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

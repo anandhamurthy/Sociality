@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sociality</string>
+    <string name="admob_app_id">ca-app-pub-2707222096804212~4237078935</string>
+    <string name="interstitial_full_screen">ca-app-pub-2707222096804212/4870174769</string>
+    <string name="banner_home_footer">ca-app-pub-2707222096804212/2403793524</string>
+</resources>

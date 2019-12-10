@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/new_event_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/new_event_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/new_event_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/close" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/new_event_close"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="New Event"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_event_app_bar"
+                android:orientation="vertical">
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/new_events_selected_images"
+                    android:horizontalSpacing="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="4dp" />
+
+
+                <EditText
+                    android:id="@+id/new_event_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_events_selected_images"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textCapWords"
+                    android:fontFamily="@font/nunito"
+                    android:hint="Event Name" />
+
+                <EditText
+                    android:id="@+id/new_event_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_event_name"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:hint="Description"
+                    android:maxLines="10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/new_event_date"
+                    android:weightSum="3"
+                    android:layout_below="@+id/new_event_description"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/new_event_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:hint="Day"
+                        android:entries="@array/day"
+                        android:dropDownSelector="@drawable/drop_down"
+                        android:spinnerMode="dialog"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/new_event_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:hint="Month"
+                        android:entries="@array/month"
+                        android:dropDownSelector="@drawable/drop_down"
+                        android:spinnerMode="dialog"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/new_event_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:hint="Year"
+                        android:inputType="number"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Volunteer Button"
+                    android:fontFamily="@font/nunito"
+                    android:textSize="16dp"
+                    android:id="@+id/new_event_volunteer"
+                    android:layout_below="@+id/new_event_date"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Donation Button"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/nunito"
+                    android:id="@+id/new_event_donation"
+                    android:layout_below="@+id/new_event_volunteer"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tie Up Button"
+                    android:fontFamily="@font/nunito"
+                    android:textSize="16dp"
+                    android:id="@+id/new_event_join_hands"
+                    android:layout_below="@+id/new_event_donation"/>
+
+                <EditText
+                    android:id="@+id/new_event_incharge_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_event_join_hands"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:hint="Event Incharge Person"
+                    android:inputType="textCapWords"/>
+
+                <EditText
+                    android:id="@+id/new_event_incharge_person_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_event_incharge_person"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:inputType="textEmailAddress"
+                    android:hint="Event Incharge Person Email Id" />
+
+                <EditText
+                    android:id="@+id/new_event_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_event_incharge_person_email_id"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:inputType="phone"
+                    android:hint="Contact Number" />
+
+
+                <EditText
+                    android:id="@+id/new_event_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_event_contact_number"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:hint="Event Web Page"
+                    android:inputType="textWebEditText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/new_event_website"
+                    android:id="@+id/new_event_donation_layout">
+
+                    <EditText
+                        android:id="@+id/new_event_donation_web_page"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Donation Web Page Address"
+                        android:inputType="textWebEditText" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/new_event_donation_layout"
+                    android:id="@+id/new_event_volunteer_layout">
+
+                    <EditText
+                        android:id="@+id/new_event_volunteer_members"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Number of Volunteers Needed"
+                        android:inputType="number" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/new_event_volunteer_layout"
+                    android:id="@+id/new_event_join_hands_layout">
+
+                    <EditText
+                        android:id="@+id/new_event_join_hands_members"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Number of Tie-Up Members Needed"
+                        android:inputType="number" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/image"
+            app:borderWidth="0dp"
+            android:id="@+id/new_event_add_image"
+            app:elevation="6dp"
+            app:fabSize="mini"
+            app:pressedTranslationZ="12dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/new_event_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/done"
+            android:layout_margin="5dp"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

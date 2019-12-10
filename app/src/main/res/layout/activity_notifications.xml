@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/notification_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/notification_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/notification_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/notification_back"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Notifications"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notifications_list"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/notification_app_bar"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/no_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:text="No Notifications Yet."
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
